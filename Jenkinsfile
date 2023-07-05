@@ -30,6 +30,13 @@ pipeline {
                 sh './jenkins/scripts/test.sh' 
             }
         }
+        stage('Deploy') {
+            steps {
+                sh './jenkins/scripts/deliver.sh'
+                input message: 'Sudah selesai menggunakan react app? (Klik "proceed" untuk mengakhiri)'
+                sh './jenkins/scripts/kill.sh'
+            }
+        }
     }
     triggers {
         pollSCM('H/2 * * * *')
