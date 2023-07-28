@@ -29,4 +29,4 @@ echo '(This is why you specified the "args ''-p 3000:3000''" parameter when you'
 echo 'created your initial Pipeline as a Jenkinsfile.)'
 echo 'After 1 minutes the pipeline process will be done'
 
-sleep 1m
+sleep 60
